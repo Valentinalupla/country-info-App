@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function App() {
   const[searchValue, setSearchValue] = useState('');
-  const[selectValue, setSelectValue] = useState('All');
+  const[selectValue, setSelectValue] = useState('');
 
   const handleSelect = (value) => {
     setSelectValue(value);
@@ -20,8 +20,10 @@ function App() {
   }
   const filteredCountries = data.filter((countrydata) => {
     return countrydata.name.common
-    .toLocaleLowerCase()
-    .includes(searchValue.toLocaleLowerCase()) === countrydata.continents.includes(selectValue);
+    .toLowerCase()
+    .includes(searchValue.toLowerCase()) 
+    }).filter((countrydata) => {
+      return selectValue !== '' ? countrydata.continents[0] === selectValue : true;
     });
     
     return (

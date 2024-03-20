@@ -1,4 +1,4 @@
-import '../scss/components/Country.scss'
+ import '../scss/components/Country.scss'
 
 function Country({singularCountry}) {
   return (
@@ -6,8 +6,8 @@ function Country({singularCountry}) {
         <span>{singularCountry.flag}
         </span>
         <h5>{singularCountry.name.common}</h5>
-        <span>{singularCountry.capital}</span> <br />
-        <span>{singularCountry.continents}</span>
+        <span>{singularCountry.capital[0]}</span> <br />
+        <span>{singularCountry.continents[0]}</span>
     </div>
   )
 }

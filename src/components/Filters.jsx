@@ -12,10 +12,10 @@ function Filters({onChangeFilter, onSelectContinent}) {
   return (
     <div className='containerFilter'>
     <h2>Filtro</h2>
-    <label htmlFor="">Country</label>
-    <input className="filter" type="text"  placeholder='Busca un país' onChange={handleInput}/>
-    <label htmlFor="">Continents</label>
-    <select  className='filter' onChange={handleSelectContinent}>
+    <label htmlFor="name">Country</label>
+    <input className="filter" type="text" id="name" placeholder='Busca un país' onChange={handleInput}/>
+    <label htmlFor="continent">Continents</label>
+    <select  className='filter' id='continent' onChange={handleSelectContinent}>
     <option value="All">All</option>
     <option value="Africa">Africa</option>
     <option value="North America">North America</option>

@@ -1,4 +1,6 @@
+
 import Country from "./Country"
+
 import '../scss/components/ListCountries.scss'
 function ListCountries({ dataCountries }) {
    
